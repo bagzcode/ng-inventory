@@ -1,0 +1,63 @@
+<div class="container" style="margin-top: 70px;">
+    <div class="card">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Item Name</th>
+          <th>Program</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items | async ;index as itemId">
+          <td>
+              {{ item.id }}
+          </td>
+          <td>
+                <a (click)="selectItem(item)"> 
+                    {{ item.name_item }}
+                </a>
+          </td>
+          <td>{{ item.program }}</td>
+          <td>
+            <font *ngIf="item.status == 'Available'" color="green">{{ item.status }}</font>
+            <font *ngIf="item.status == 'Not Available'" color="red">{{ item.status }}</font>
+          </td>
+        </tr>
+        <tr *ngIf="selectedItem">
+            <td colspan=5>
+            <div class="card">
+                <!-- Portfolio Item Heading -->
+                <h1 class="my-4">{{selectedItem.name_item}}</h1>
+        
+                <!-- Portfolio Item Row -->
+                <div class="row">
+        
+                    <div class="col-md-8">
+                        <img class="img-fluid" src="http://placehold.it/750x500" alt="">
+                    </div>
+        
+                    <div class="col-md-4">
+                        <h3 class="my-3">Status : 
+                            <small>
+                                <font *ngIf="selectedItem.status == 'Available'" color="green">{{ selectedItem.status }}</font>
+                                <font *ngIf="selectedItem.status == 'Not Available'" color="red">{{ selectedItem.status }}</font>
+                            </small>
+                        </h3>
+                        <h4 class="my-3">Program : <small>{{selectedItem.program}}</small></h4>
+                        <h3 class="my-3">Descriptions</h3>
+                        <p><small>(Code: {{selectedItem.code}})</small></p>
+                        <p>{{selectedItem.description}}</p>
+                        <button *ngIf="selectedItem.status == 'Available'">Borrow</button>
+                    </div>
+                </div>
+            <!-- /.row -->  
+            </div>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+</div>
+  
