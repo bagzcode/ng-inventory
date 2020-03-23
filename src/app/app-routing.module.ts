@@ -1,18 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-//import { AuthGuard } from './core/auth.guard';
-//import { LoginComponent } from './login/login.component';
-//import { RegisterComponent } from './register/register.component';
-//import { InventoryListComponent } from './inventory-list/inventory-list.component';
+import { AuthGuard } from './core/auth.guard';
 
 
 const routes: Routes = [
-  //{ path: "", pathMatch: "full", redirectTo: "login"},
-  //{ path: "login", component: LoginComponent, canActivate: [AuthGuard] },
-  //{ path: "register", component: RegisterComponent, canActivate: [AuthGuard] },
-  //{ path: "inventory-list", component: InventoryListComponent }
-  { path: '', loadChildren: () => import('./admin-layout/admin-layout.module').then(m => m.AdminLayoutModule) },
-  { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule) },
+  { path: "", pathMatch: "full", redirectTo: "apps"},
+  { path: "apps", loadChildren: () => import('./application/application.module').then(m => m.ApplicationModule) },
+  { path: 'admin', loadChildren: () => import('./admin-layout/admin-layout.module').then(m => m.AdminLayoutModule), canActivate: [AuthGuard]},
+  { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule), canActivate: [AuthGuard] },
 ];
 
 @NgModule({

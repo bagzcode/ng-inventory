@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "bi-inventory": {
+      "hosting": {
+        "inventory": [
+          "bi-inventory"
+        ]
+      }
+    }
+  }
+}

@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
-import { InventoryService } from '../core/inventory.service';
+import { InventoryService } from '../../core/inventory.service';
 
 @Component({
-  selector: 'app-inventory-list',
-  templateUrl: './inventory-list.component.html',
-  styleUrls: ['./inventory-list.component.css']
+  selector: 'app-item-list',
+  templateUrl: './item-list.component.html',
+  styleUrls: ['./item-list.component.css']
 })
-export class InventoryListComponent implements OnInit {
+export class ItemListComponent implements OnInit {
   items;
   selectedItem;
 
