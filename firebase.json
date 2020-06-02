@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "inventory",
+      "public": "dist/inventory",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

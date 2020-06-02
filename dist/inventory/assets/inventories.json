@@ -1,0 +1,42 @@
+[
+    { 
+        "id": 1, 
+        "code": "CS001L01130320001", 
+        "name_item": "Arduino - SN: 0123456789", 
+        "location": "lemari Rak CS 1", 
+        "group_item": "001", 
+        "program": "CS", 
+        "description": "includes casing and power adaptor",
+        "status": "Available" 
+    },
+    { 
+        "id": 2, 
+        "code": "CS002L03130320002", 
+        "name_item": "Raspberry Pi 3", 
+        "location": "lemari Rak CS 3", 
+        "group_item": "002", 
+        "program": "CS", 
+        "description": "includes casing and power adaptor",
+        "status": "Available"  
+    },
+    { 
+        "id": 3, 
+        "code": "GD002L01130320003", 
+        "name_item": "Macky", 
+        "location": "lemari Rak GD 1", 
+        "group_item": "001", 
+        "program": "GDNM", 
+        "description": "includes casing and power adaptor",
+        "status": "Not Available"  
+    },
+    { 
+        "id": 4, 
+        "code": "GD003L01130320004", 
+        "name_item": "Keyboard", 
+        "location": "lemari Rak GD 1", 
+        "group_item": "001", 
+        "program": "GDNM", 
+        "description": "includes casing and power adaptor", 
+        "status": "Available" 
+    }
+  ]
