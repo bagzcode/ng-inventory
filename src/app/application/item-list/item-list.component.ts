@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { InventoryService } from '../../core/inventory.service';
+//import { InventoryService } from '../../core/inventory.service';
+import { InventoryService } from '../../api/inventory.service';
 
 @Component({
   selector: 'app-item-list',
@@ -16,7 +17,7 @@ export class ItemListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.items = this.inventoryitem.getInventories();
+    this.items = this.inventoryitem.getInventory()//getInventories();
   }
 
   selectItem(item){

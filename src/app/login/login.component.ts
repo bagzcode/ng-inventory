@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       res => {
         this.errorMessage = "";
         this.successMessage = "successfully login";
-        if(res.user.email == 'admin@admin.com'){
+        if(res.user.email == 'admin@email.com'){
           this.router.navigate(['/admin']);
         }
         else{
